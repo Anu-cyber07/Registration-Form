@@ -10,7 +10,7 @@
   
         <mat-card-content>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" class="form-control" [(ngModel)]="data.name" #name="ngModel" [ngModelOptions]="{standalone: true}"
+            <input matInput placeholder="Username"  [(ngModel)]="data.name" #name="ngModel" [ngModelOptions]="{standalone: true}"
             [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }"  required>
           <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
             <p *ngIf="name.errors">Name is required</p>
@@ -18,7 +18,7 @@
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" class="form-control" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  [(ngModel)]="data.email" #email="ngModel" [ngModelOptions]="{standalone: true}"
+            <input matInput placeholder="Email"  pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  [(ngModel)]="data.email" #email="ngModel" [ngModelOptions]="{standalone: true}"
             required [(ngModel)]="data.email" #emailCtrl="ngModel" email>
             <div *ngIf="!email.valid && email.touched ">
               <div color="danger">Email is not valid</div>
@@ -26,7 +26,7 @@
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Mobile number" class="form-control"  [(ngModel)]="data.mobile" #mobile="ngModel" [ngModelOptions]="{standalone: true}"
+            <input matInput placeholder="Mobile number"  [(ngModel)]="data.mobile" #mobile="ngModel" [ngModelOptions]="{standalone: true}"
             [ngClass]="{ 'is-invalid': userForm.submitted && mobile.invalid }"  required>
           <div *ngIf="userForm.submitted && mobile.invalid" class="invalid-feedback">
             <div *ngIf="mobile.errors">Mobile number is required</div>
@@ -35,7 +35,7 @@
   
           <mat-form-field class="example-full-width">
             <mat-label>Choose designation</mat-label>
-            <mat-select  class="form-control" type="string"[(ngModel)]="data.profession" #profession="ngModel"  [ngModelOptions]="{standalone: true}"required>
+            <mat-select   type="string"[(ngModel)]="data.profession" #profession="ngModel"  [ngModelOptions]="{standalone: true}"required>
               <mat-option value="student">Student</mat-option>
               <mat-option value="Teacher">Teacher</mat-option>
               <mat-option value="Business">Business</mat-option>
@@ -46,7 +46,7 @@
           </div>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="City" class="form-control"  [(ngModel)]="data.city" #city="ngModel" [ngModelOptions]="{standalone: true}"
+            <input matInput placeholder="City"  [(ngModel)]="data.city" #city="ngModel" [ngModelOptions]="{standalone: true}"
             [ngClass]="{ 'is-invalid': userForm.submitted && city.invalid }"  required>
           <div *ngIf="userForm.submitted && city.invalid" class="invalid-feedback">
             <div *ngIf="mobile.errors">city is required</div>
